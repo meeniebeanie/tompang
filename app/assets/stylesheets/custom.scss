@@ -55,15 +55,18 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  padding-top: 10px;
 }
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+/* home page */
+
+#cover {
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    width:100vw;
 }
