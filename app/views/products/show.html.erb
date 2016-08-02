@@ -7,6 +7,11 @@
 </p>
 
 <p>
+  <strong>Product Description:</strong>
+  <%= @product.product_description %>
+</p>
+
+<p>
   <strong>Price:</strong>
   $<%= number_with_precision(@product.price, precision:2) %>
 </p>
