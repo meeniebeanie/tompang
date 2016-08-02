@@ -58,22 +58,10 @@ p {
   padding-top: 10px;
 }
 
-/* home page */
-
-#cover {
-  position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-    width:100vw;
-    display: block;
+.right {
+  float: right;
 }
 
-.block {
-  display: block;
-  color: white;
-  font-weight: bold;
+.actions {
+  display: inline-block;
 }
