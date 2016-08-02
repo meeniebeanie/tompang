@@ -1,7 +1,7 @@
 <% provide(:title, "Home") %>
 
-<div class="jumbotron">
+<div>
   <h1>Buy the World</h1>
   <p>Find me in app/views/static_pages/home.html.erb</p>
-  <%= image_tag("home", id:"cover") %>
+  <%= video_tag("home.mp4", id:"cover", autoplay: true, loop: true, muted: true) %>
 </div>
