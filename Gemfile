@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.0'
 gem 'sqlite3'
 gem 'bootstrap-sass', '3.3.6'
 gem 'bootstrap_form'
+gem 'devise'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
