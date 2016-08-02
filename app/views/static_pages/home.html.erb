@@ -1,7 +1,11 @@
 <% provide(:title, "Home") %>
 
-<div>
+<div class="block">
   <h1>Buy the World</h1>
   <p>Find me in app/views/static_pages/home.html.erb</p>
-  <%= video_tag("home.mp4", id:"cover", autoplay: true, loop: true, muted: true) %>
+  <%= video_tag("home.mp4", id:"cover", autoplay: true, loop: true, muted: true, controls: true) %>
+</div>
+<div class="block">
+  <p>category 1</p>
+  <p>category 2</p>
 </div>

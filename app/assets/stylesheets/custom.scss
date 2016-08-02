@@ -69,4 +69,11 @@ p {
     overflow: hidden;
     z-index: -100;
     width:100vw;
+    display: block;
+}
+
+.block{
+  display: block;
+  color: white;
+  font-weight: bold;
 }
