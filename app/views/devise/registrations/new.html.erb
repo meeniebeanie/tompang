@@ -5,6 +5,15 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
+
+    <div class="field">
+      <%= f.text_field :first_name, autofocus: true, label:"First Name" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :last_name, autofocus: true, label:"Last Name" %>
+    </div>
+
     <div class="field">
       <%= f.email_field :email, autofocus: true %>
     </div>

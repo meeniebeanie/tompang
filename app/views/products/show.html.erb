@@ -4,6 +4,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title"><%= @product.product_name %></h3>
+    <p class="panel-title">Listed by:<em> <%= @product.user.first_name %></em></p>
   </div>
   <div class="panel-body">
     <p>
