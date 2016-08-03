@@ -3,7 +3,9 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= @product.product_name %></h3>
+    <h3 class="panel-title">
+      <%=link_to @product.product_name, products_path(@product)%>
+    </h3>
     <p class="panel-title">Listed by:<em> <%= @product.user.first_name %></em></p>
   </div>
   <div class="panel-body">
@@ -16,6 +18,10 @@
       <strong>Price:</strong><br>
       $<%= number_with_precision(@product.price, precision:2) %>
     </p>
+
+    <div class="btn-group">
     <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default" %>
+    <%= link_to 'Show', product_path(@product), class:"btn btn-default" %>
+    </div>
   </div>
 </div>
