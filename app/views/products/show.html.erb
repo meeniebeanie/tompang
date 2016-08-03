@@ -3,25 +3,18 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><strong><%= @product.product_name %></strong></h3>
-    <p class="panel-title"><%= @product.user.email %></p>
+    <h3 class="panel-title"><%= @product.product_name %></h3>
   </div>
   <div class="panel-body">
     <p>
       <strong>Product Description:</strong><br>
       <%= @product.product_description %>
     </p>
+
     <p>
       <strong>Price:</strong><br>
       $<%= number_with_precision(@product.price, precision:2) %>
     </p>
-    <% if @product.user == current_user %>
-        <td>
-          <div class="btn-group">
-          <%= link_to 'Edit', edit_product_path(@product), type:"button", class:"btn btn-default"%>
-          <%= link_to 'Remove', @product, method: :delete, data: { confirm: 'Are you sure?' }, type:"button", class:"btn btn-default" %>
-          </div>
-        </td>
-    <% end %>
+    <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default" %>
   </div>
 </div>
