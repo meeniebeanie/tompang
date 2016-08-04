@@ -6,20 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do |n|
-  product_name        = Faker::Commerce.product_name
-  country             = Faker::Address.country
-  product_description = Faker::Lorem.paragraph
-  price               = Faker::Commerce.price
-  user_id             = Faker::Number.between(1, 5)
-
-  Product.create!( product_name:        product_name,
-                   country:             country,
-                   product_description: product_description,
-                   price:               price,
-                   user_id:             user_id,
-                  )
-end
 
 5.times do |n|
   first_name     = Faker::Name.first_name
@@ -33,4 +19,19 @@ end
                 password:              password,
                 password_confirmation: password
                )
+end
+
+10.times do |n|
+  product_name        = Faker::Commerce.product_name
+  country             = Faker::Address.country
+  product_description = Faker::Lorem.paragraph
+  price               = Faker::Commerce.price
+  user_id             = Faker::Number.between(1, 5)
+
+  Product.create!( product_name:        product_name,
+                   country:             country,
+                   product_description: product_description,
+                   price:               price,
+                   user_id:             user_id,
+                  )
 end
