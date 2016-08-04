@@ -9,8 +9,8 @@
         <img class="card-img img-responsive" src="..." alt="Card image cap">
         <div class="card-block">
           <h4 class="card-title"><%= product.product_name %></h4>
-          <p class="card-text"><%= product.product_description %></p>
-          <%= link_to number_with_precision(product.price, precision:2), product, :class => "btn btn-info" %>
+          <p class="card-text" id="country"><%= product.country %>
+          <p class="card-text"><%= link_to product.product_description, product %>
         </div>
       </div>
     </div>
