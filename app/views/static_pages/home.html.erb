@@ -2,10 +2,16 @@
 
 <div class="block">
   <h1>Tompang<br> the World</h1>
-  <p>Find me in app/views/static_pages/home.html.erb</p>
-  <%= video_tag("home.mp4", id:"cover", autoplay: true, loop: true, muted: true, controls: true) %>
-</div>
-<div class="block">
-  <p>category 1</p>
-  <p>category 2</p>
+
+  <div class="form-group col-sm-12">
+    <label for="country"><h3>Tompang from these Countries:</h3></label>
+    <select class="form-control" id="country" onchange="window.location.href = '/product/' + this.value;">
+      <% @products.each do |product| %>
+      <option><%= link_to "#{product.country}", "/product/#{product.country}"  %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <%= video_tag("home.mp4", id:"cover", autoplay: true, loop: true, muted: true, controls: false) %>
+
 </div>

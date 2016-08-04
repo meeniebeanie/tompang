@@ -17,9 +17,10 @@
   <div class="card">
     <img class="card-img img-responsive" src="..." alt="Card image cap">
     <div class="card-block">
-      <h4 class="card-title"><%= product.product_name %></h4>
+      <h4 class="card-title"><%= link_to product.product_name, product %></h4>
       <p class="card-text" id="country"><%= product.country %>
-      <p class="card-text"><%= link_to product.product_description, product %>
+      <p class="card-text"><%=
+      truncate( product.product_description, length: 90, omission: '...') %>
     </div>
   </div>
 </div>
