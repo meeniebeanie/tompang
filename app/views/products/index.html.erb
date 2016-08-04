@@ -5,9 +5,18 @@
 
 <div class="form-group col-sm-12">
   <label for="country"><h3>Choose Country:</h3></label>
-  <select class="form-control" id="country">
     <% @products.each do |product| %>
-    <option><%= product.country %></option>
+      <li><%= link_to "#{product.country}", "/product/#{product.country}"  %></li>
+    <% end %>
+</div>
+
+<div class="form-group col-sm-12">
+  <label for="country"><h3>Choose Country:</h3></label>
+    <%= form_tag search_products_path, method: :get do |f| %>
+    <%= select_tag :country,
+        options_for_select(Product.all.map{ |c| [c.country]}),
+        { :class => 'form-control' } %>
+    <%= submit_tag 'Search' %>
     <% end %>
   </select>
 </div>

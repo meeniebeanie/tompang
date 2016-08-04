@@ -62,10 +62,22 @@ class ProductsController < ApplicationController
     end
   end
 
+  def search
+    @products = Product.search(params)
+  end
+
+  def showbycountry
+    @products_country = Product.where(country: params[:country])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      if params[:country]
+        @products_country = Product.where(:country, params[:country])
+      else
+        @product = Product.find(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
