@@ -3,18 +3,27 @@
 <p id="notice"><%= notice %></p>
 <h1>Products</h1>
 
+<div class="form-group col-sm-12">
+  <label for="country"><h3>Choose Country:</h3></label>
+  <select class="form-control" id="country">
     <% @products.each do |product| %>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <div class="card">
-        <img class="card-img img-responsive" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title"><%= product.product_name %></h4>
-          <p class="card-text" id="country"><%= product.country %>
-          <p class="card-text"><%= link_to product.product_description, product %>
-        </div>
-      </div>
-    </div>
+    <option><%= product.country %></option>
     <% end %>
+  </select>
+</div>
+
+<% @products.each do |product| %>
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card">
+    <img class="card-img img-responsive" src="..." alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"><%= product.product_name %></h4>
+      <p class="card-text" id="country"><%= product.country %>
+      <p class="card-text"><%= link_to product.product_description, product %>
+    </div>
+  </div>
+</div>
+<% end %>
 
 <table class='table'>
   <thead>
