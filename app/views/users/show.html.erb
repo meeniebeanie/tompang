@@ -1,0 +1,25 @@
+<% provide(:title, "Profile") %>
+
+<h1><%= @user.first_name %><%= @user.last_name %></h1>
+
+<% @products.each do |product| %>
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card">
+    <img class="card-img img-responsive" src="..." alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"><%= link_to product.product_name, product %></h4>
+      <p class="card-text" id="country"><%= product.country %>
+      <p class="card-text"><%=
+      truncate( product.product_description, length: 90, omission: '...') %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+  <% if @user == current_user %>
+    <div class="btn-group">
+    <%= link_to 'Edit', edit_product_path(product), type:"button", class:"btn btn-default"%>
+    <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' }, type:"button", class:"btn btn-default" %>
+    </div>
+  <% end %>
+</div>
