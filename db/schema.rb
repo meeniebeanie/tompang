@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20160802112448) do
     t.string   "country"
     t.text     "product_description"
     t.decimal  "price"
+    t.string   "imgurl"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "user_id"

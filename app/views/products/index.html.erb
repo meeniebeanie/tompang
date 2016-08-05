@@ -5,9 +5,11 @@
 
 <div class="form-group col-sm-12">
   <label for="country"><h3>Choose Country:</h3></label>
-  <select class="form-control" id="country" onchange="window.location.href = '/product/' + this.value;">
+  <select       class = "form-control"
+                   id = "country"
+             onchange = "window.location.href = '/product/' + this.value;">
     <% @products.each do |product| %>
-    <option><%= link_to "#{product.country}", "/product/#{product.country}"  %></option>
+    <option><%= link_to "#{product.country}", "/product/#{product.country}" %></option>
     <% end %>
   </select>
 </div>
@@ -15,7 +17,8 @@
 <% @products.each do |product| %>
 <div class="col-sm-6 col-md-4 col-lg-3">
   <div class="card">
-    <img class="card-img img-responsive" src="..." alt="Card image cap">
+    <div class="card-img thumbnail img-responsive" style="background-image: url(<%= product[:imgurl]%>)"></div>
+    <!-- <img class="card-img img-responsive" src="<%= product[:imgurl]%>" alt="Card image cap"> -->
     <div class="card-block">
       <h4 class="card-title"><%= link_to product.product_name, product %></h4>
       <p class="card-text" id="country"><%= product.country %>
